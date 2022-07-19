@@ -1,0 +1,137 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+
+  .top_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: #0b1a26;
+
+    &_links {
+      display: flex;
+      align-items: stretch;
+      justify-content: end;
+      height: 100%;
+    }
+
+    &_link {
+      display: flex;
+      align-items: center;
+      border-left: 1px solid #454545;
+      height: 100%;
+      padding: 0 10px;
+
+      &:last-child {
+        border-right: 1px solid #454545;
+      }
+
+      a {
+        font-size: 0.75rem;
+        color: $txt-dark-grey;
+        text-decoration: none;
+        vertical-align: middle;
+
+        &:hover {
+          color: $txt-clear;
+        }
+      }
+    }
+  }
+
+  .nav {
+    background-color: transparent;
+    padding: 2.8rem 0;
+    width: 100%;
+    transition: 0.3s background-color ease-in-out;
+
+    &.scroll {
+      background-color: #161b1d;
+      padding-bottom: 1.5rem;
+    }
+
+    .hamburger {
+      display: none;
+      position: relative;
+      width: 40px;
+      height: 25px;
+      cursor: pointer;
+
+      span {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-radius: 6px;
+        width: 100%;
+        height: 1px;
+      }
+
+      span:first-child {
+        top: 0;
+      }
+
+      span:last-child {
+        bottom: 0;
+      }
+    }
+
+    &_content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &_brand {
+      width: 140px;
+      height: 54px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &_links {
+      display: flex;
+      align-items: center;
+    }
+
+    &_link {
+      a {
+        background-color: transparent;
+        border-radius: 6px;
+        font-family: "Century Gothic", sans-serif;
+        font-size: 18px;
+        color: $txt-white-grey;
+        padding: 15px 10px;
+        text-decoration: none;
+        transition: background-color 0.25s ease-in;
+
+        &:hover {
+          background-color: $blue-secondary;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .header {
+    .nav {
+      .hamburger {
+        display: block;
+      }
+
+      &_links {
+        display: none;
+      }
+    }
+  }
+}

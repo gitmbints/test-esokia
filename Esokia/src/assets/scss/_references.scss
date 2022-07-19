@@ -1,0 +1,44 @@
+.references {
+  background-color: $blue-secondary;
+  padding-top: 2.8rem;
+  padding-bottom: 4.5rem;
+
+  & > * + * {
+    margin-left: 1.8rem;
+  }
+
+  h2 {
+    font-size: 30px;
+    color: $txt-clear;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 0.467;
+    text-align: center;
+    margin-bottom: 1.75rem;
+  }
+
+  p {
+    font-size: 16px;
+    color: $txt-clear;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &_content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .references {
+    &_content {
+      width: 90%;
+      margin: 2rem auto 0;
+    }
+  }
+}
